@@ -572,7 +572,8 @@
 }
 
 .indigo.lighten-1 {
-    background-color: #5c6bc0 !important
+    background-color: #5c6bc0 !important;
+    margin-bottom: 50px;
 }
 
 .indigo-text.text-lighten-1 {
