@@ -1,5 +1,8 @@
-from flask import render_template
-from flask import Flask
+import os
+import json
+from flask import Flask, render_template, url_for
+
+
 app = Flask(__name__)
 
 @app.route('/index')
@@ -9,72 +12,90 @@ def index():
 
 @app.route('/amor')
 def amor():
-    return render_template('amor.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_amor.json').read())
+    return render_template('amor.html', versiculos=versiculos)
 
 @app.route('/fe')
 def fe():
-    return render_template('fe.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_fe.json').read())
+    return render_template('fe.html', versiculos=versiculos)
 
 @app.route('/arrependimento')
 def arrependimento():
-    return render_template('arrependimento.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_arrependimento.json').read())
+    return render_template('arrependimento.html', versiculos=versiculos)
 
 @app.route('/amizade')
 def amizade():
-    return render_template('amizade.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_amizade.json').read())
+    return render_template('amizade.html', versiculos=versiculos)
 
 @app.route('/casamento')
 def casamento():
-    return render_template('casamento.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_casamento.json').read())
+    return render_template('casamento.html', versiculos=versiculos)
 
 @app.route('/paz')
 def paz():
-    return render_template('paz.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_paz.json').read())
+    return render_template('paz.html', versiculos=versiculos)
 
 @app.route('/forca')
 def forca():
-    return render_template('forca.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_forca.json').read())
+    return render_template('forca.html', versiculos=versiculos)
 
 @app.route('/familia')
 def familia():
-    return render_template('familia.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_familia.json').read())
+    return render_template('familia.html', versiculos=versiculos)
 
 @app.route('/cura')
 def cura():
-    return render_template('cura.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_cura.json').read())
+    return render_template('cura.html', versiculos=versiculos)
 
 @app.route('/trabalho')
 def trabalho():
-    return render_template('trabalho.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_trabalho.json').read())
+    return render_template('trabalho.html', versiculos=versiculos)
 
 @app.route('/vergonha')
 def vergonha():
-    return render_template('vergonha.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_vergonha.json').read())
+    return render_template('vergonha.html', versiculos=versiculos)
 
 @app.route('/gratidao')
 def gratidao():
-    return render_template('gratidao.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_gratidao.json').read())
+    return render_template('gratidao.html', versiculos=versiculos)
 
 @app.route('/traicao')
 def traicao():
-    return render_template('traicao.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_traicao.json').read())
+    return render_template('traicao.html', versiculos=versiculos)
 
 @app.route('/medo')
 def medo():
-    return render_template('medo.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_medo.json').read())
+    return render_template('medo.html', versiculos=versiculos)
 
 @app.route('/morte')
 def morte():
-    return render_template('morte.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_morte.json').read())
+    return render_template('morte.html', versiculos=versiculos)
 
 @app.route('/vidaeterna')
 def vidaeterna():
-    return render_template('vidaeterna.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_vidaeterna.json').read())
+    return render_template('vidaeterna.html', versiculos=versiculos)
 
 @app.route('/perdao')
 def perdao():
-    return render_template('perdao.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_perdao.json').read())
+    return render_template('perdao.html', versiculos=versiculos)
 
 @app.route('/coragem')
 def coragem():
-    return render_template('coragem.html')
+    versiculos = json.loads(open('versiculos-por-tema/versiculos_coragem.json').read())
+    return render_template('coragem.html', versiculos=versiculos)

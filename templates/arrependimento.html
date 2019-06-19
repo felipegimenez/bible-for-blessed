@@ -68,81 +68,20 @@
             </div>
 
             
+            {% for verse in versiculos %}
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="card indigo lighten-1">
                         <div class="card-content white-text">
-                            <span class="card-title">Marcos 1:4</span>
-                            <q>apareceu João Batista no deserto, pregando batismo de arrependimento para remissão de pecados.</q>
+                            <span class="card-title">{{ verse.title }}</span>
+                            <q>{{ verse.verse }}</q>
                         </div>
                     <div class="card-action">
-                      <a href="https://www.bible.com/pt/bible/1608/MRK.1.ARA" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
+                      <a href="{{ verse.url }}" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
                     </div>
                   </div>
                 </div>
-                      
-                        
-                <div class="col-md-6 col-sm-12">
-                    <div class="card indigo lighten-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">Lucas 3:3</span>
-                            <q>Ele percorreu toda a circunvizinhança do Jordão, pregando batismo de arrependimento para remissão de pecados,</q>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://www.bible.com/pt/bible/1608/LUK.3.ARA" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-12">
-                        <div class="card indigo lighten-1">
-                            <div class="card-content white-text">
-                                <span class="card-title">Atos 13:24</span>
-                                <q>havendo João, primeiro, pregado a todo o povo de Israel, antes da manifestação dele, batismo de arrependimento.</q>
-                            </div>
-                        <div class="card-action">
-                          <a href="https://www.bible.com/pt/bible/1608/ACT.13.ARA" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
-                        </div>
-                      </div>
-                    </div>
-                          
-                            
-                    <div class="col-md-6 col-sm-12">
-                        <div class="card indigo lighten-1">
-                            <div class="card-content white-text">
-                                <span class="card-title">Atos 20:21</span>
-                                <q>testificando tanto a judeus como a gregos o arrependimento para com Deus e a fé em nosso Senhor Jesus [Cristo].</q>
-                            </div>
-                            <div class="card-action">
-                                <a href="https://www.bible.com/pt/bible/1608/ACT.20.ARA" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                        <div class="card indigo lighten-1">
-                            <div class="card-content white-text">
-                                <span class="card-title">Romanos 2:4</span>
-                                <q>Ou desprezas a riqueza da sua bondade, e tolerância, e longanimidade, ignorando que a bondade de Deus é que te conduz ao arrependimento?</q>
-                            </div>
-                            <div class="card-action">
-                                <a href="https://www.bible.com/pt/bible/1608/ROM.2.ARA" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                        <div class="card indigo lighten-1">
-                            <div class="card-content white-text">
-                                <span class="card-title">2Coríntios 7:10</span>
-                                <q>Porque a tristeza segundo Deus produz arrependimento para a salvação, que a ninguém traz pesar; mas a tristeza do mundo produz morte.</q>
-                            </div>
-                            <div class="card-action">
-                                <a href="https://www.bible.com/pt/bible/1608/2CO.7.ARA" target=”_blank” rel=”noopener noreferrer”>Leia o capítulo inteiro</a>
-                            </div>
-                        </div>
-                    </div>
-            </div>
+            {% endfor %}
 
             <button type="button" onclick="history.go(-1)" class="btn btn-default" style="background-color: #3f51b5">Voltar</button>
 
